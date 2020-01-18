@@ -1,0 +1,17 @@
+{% extends "search_app/base.html" %}
+{% block content %}
+    {% for flight in content %}
+
+    <article class="content-section">
+      <div class="media-body">
+        <div class="article-metadata">
+          <a class="mr-2" href="#">{{ flight.from }} ->{{ flight.to }}</a>
+          <small class="text-muted">{{ flight.airline }}</small>
+        </div>
+        <h2><a class="article-title">{{ flight.price }} {{ flight.currency }}</a></h2>
+      </div>
+    </article>
+
+    {% endfor %}
+{% endblock content %}
+
